@@ -8,5 +8,6 @@ namespace Persistence
     {
           public DataContext(DbContextOptions options) : base(options) {}
           public DbSet<Value> Values {get;set;}
+          public DbSet<Activity> Activities{get;set;}
     }
 }
