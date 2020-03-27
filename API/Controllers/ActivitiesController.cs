@@ -5,6 +5,7 @@ using MediatR;
 using Domain;
 using Microsoft.AspNetCore.Mvc;
 using Application.Activities;
+using System;
 
 namespace API.Controllers
 {
@@ -23,5 +24,13 @@ namespace API.Controllers
         {
             return await _mediator.Send(new List.Query());
         }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Activity>> Details(Guid id)
+        {
+            return await _mediator.Send(new Details.Query{Id = id});
+        }
+
+        
     }
 }
