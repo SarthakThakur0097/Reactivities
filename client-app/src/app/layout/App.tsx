@@ -30,7 +30,7 @@ const App = () => {
         <ActivityDashboard
           activities={activities}
           selectActivity={handleSelectActivity}
-          selectedActivity={selectedActivity!}
+          selectedActivity={selectedActivity}
         />
       </Container>
     </Fragment>

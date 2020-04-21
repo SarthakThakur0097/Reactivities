@@ -15,6 +15,8 @@ const ActivityDashboard: React.FC<IProps> = ({
   activities,
   selectActivity,
   selectedActivity
+
+  
 }) => {
   return (
     <Grid>
@@ -22,7 +24,7 @@ const ActivityDashboard: React.FC<IProps> = ({
         <ActivityList activities={activities} selectActivity={selectActivity} />
       </Grid.Column>
       <Grid.Column width={6}>
-        {selectActivity && <ActivityDetails activity={selectedActivity!} />}
+        {selectedActivity && <ActivityDetails activity={selectedActivity} />}
         <AcitivityForm />
       </Grid.Column>
     </Grid>
